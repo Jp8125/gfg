@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div class="container">
+        <div>
+            <h4 class="text-center mt-5">Hello,What Do you Want To learn</h4>
+            <div class="d-flex justify-content-center my-3">
+                <form class="d-flex  my-2 my-lg-0 input-group">
+                    <input class="form-control "  aria-describedby="button-addon1" type="text" placeholder="Search">
+                    <button class="btn btn-success add-on" type="submit" id="button-addon1">Search</button>
+                </form>
+            </div>
+            <div class="d-flex justify-content-center mt-2">
+                <p  *ngFor="let item of learnings" class="mx-2 border p-2 rounded" id="cb">{{item}}</p>
+            </div>
+        </div>
+    </div>
+</div>
