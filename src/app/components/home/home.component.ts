@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataService } from 'src/app/services/data.service';
+
 
 @Component({
   selector: 'app-home',
@@ -10,8 +10,8 @@ export class HomeComponent {
   ngOnInit(): void {
     
   }
-  learnings: string[] 
-    constructor(private ContentService:DataService){
-      this.learnings=ContentService.getLearnings()    
+
+    constructor(){
+ 
     }
 }

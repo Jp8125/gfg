@@ -1,0 +1,15 @@
+<div class="container d-flex flex-wrap justify-content-between">
+    <div *ngFor="let item of subArr" class="card shadow">
+      <img class="card-img-top" src="https://res.cloudinary.com/dysfwbod4/image/upload/v1682140856/samples/cloudinary-logo-vector.svg" alt="Title">
+      <div class="card-body">
+        <h5 class="card-title">{{item.title}}</h5>
+        <p class="card-text">{{item.description}}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{item.modules}} <span class="text-muted">Modules</span></li>
+        <li class="list-group-item">{{item.totalhours}} <span class="text-muted">Hours</span></li>
+        <li class="list-group-item"><span class="text-muted">For</span> {{item.level}}</li>
+      </ul>
+    </div>
+    </div>
+    

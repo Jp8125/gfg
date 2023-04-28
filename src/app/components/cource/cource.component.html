@@ -1,0 +1,22 @@
+<h1 class="text-center">Cources for you</h1>
+    
+<div class="container d-flex flex-wrap justify-content-between">
+<div *ngFor="let item of courceArray" class="card shadow">
+  <img class="card-img-top" src="https://res.cloudinary.com/dysfwbod4/image/upload/v1682140856/samples/cloudinary-logo-vector.svg" alt="Title">
+  <div class="card-body">
+    <h5 class="card-title">{{item.title}}</h5>
+    <p class="card-text">{{item.description}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{item.modules}} <span class="text-muted">Modules</span></li>
+    <li class="list-group-item">{{item.totalhours}} <span class="text-muted">Hours</span></li>
+    <li class="list-group-item"><span class="text-muted">For</span> {{item.level}}</li>
+  </ul>
+  <div class="card-body" *ngIf="item.subscribed else after">
+    <button class="btn btn-outline-primary">Continue</button> 
+  </div>
+  <ng-template #after>
+    <button class="btn btn-outline-primary" (click)="sub(item)">Subscribe</button> 
+ </ng-template>
+</div>
+</div>
